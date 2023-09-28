@@ -42,7 +42,7 @@ class ProductsController extends Controller
 
     public function __construct(ProductRepository $productRepository)
     {
-        $this->middleware('auth:api', ['except' => ['indexAll']]);
+        $this->middleware('auth:api', ['except' => ['indexAll','update','destroy']]);
         $this->productRepository = $productRepository;
     }
 

@@ -2,7 +2,8 @@
   <div id="app">
     <div class="ui fixed inverted menu vue-color">
       <div class="ui container">
-        <a href="#" class="header item">Project VueJs FrontEnd - ApiRest</a>
+        <a href="#" class="header item">Books</a>
+        <a href="./login" class="header item">Collection</a>
       </div>
     </div>
 
@@ -33,7 +34,7 @@ export default {
   },
   data() {
     return {
-      url: "http://127.0.0.1:8000/api/products/view/all",
+      url: "http://127.0.0.1:8000",
       books: [],
       form: {
         title: "",
@@ -47,7 +48,7 @@ export default {
     getBooks() {
       this.loader = true;
 
-      axios.get(this.url).then(data => {
+      axios.get(`${this.url}/api/products/view/all`).then(data => {
         //console.log(data.data.data.data);
         this.books = data.data.data.data;
         //console.log(this.books);
@@ -56,9 +57,8 @@ export default {
     },
     deleteBooks(id) {
       this.loader = true;
-
       axios
-        .delete(`${this.url}/${id}`)
+        .delete(`${this.url}/api/products/${id}`)
         .then(() => {
           this.getBooks();
         })
@@ -86,9 +86,9 @@ export default {
       this.loader = true;
 
       axios
-        .put(`${this.url}/${data.id}`, {
-          title: data.data.data.data.title,
-          description: data.data.data.data.description
+        .put(`${this.url}/api/products/${data.id}`, {
+          title: data.title,
+          description: data.description
         })
         .then(() => {
           this.getBooks();
@@ -102,12 +102,12 @@ export default {
       this.deleteBooks(id);
     },
     onEdit(data) {
-       window.console.log("app edit ", data);
+       //window.console.log("app edit ", data);
       this.form = data;
       this.form.isEdit = true;
     },
     onFormSubmit(data) {
-      // window.console.log("app onFormSubmit", data);
+      //window.console.log("app onFormSubmit", data);
       if (data.isEdit) {
         // call edit customer
         this.editBooks(data);

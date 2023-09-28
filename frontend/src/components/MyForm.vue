@@ -74,7 +74,7 @@ export default {
     },
     formValidation() {
       // book name
-      if (document.getElementsByName("book_name")[0].value === "") {
+      if (document.getElementsByName("title")[0].value === "") {
         alert("Enter book name");
         return false;
       }

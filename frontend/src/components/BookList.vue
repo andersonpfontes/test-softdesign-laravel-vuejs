@@ -38,12 +38,12 @@ export default {
     }
   },
   methods: {
-    onDelete(id) {
-      // window.console.log("Book list delete " + id);
-      this.$emit("onDelete", id);
+    onDelete(data) {
+       //console.log("Book list delete " + data.id);
+      this.$emit("onDelete", data.id);
     },
     onEdit(data) {
-       window.console.log("Book list edit " + data);
+       //console.log("Book list edit " + data);
       this.$emit("onEdit", data);
     }
   }

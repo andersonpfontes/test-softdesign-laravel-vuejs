@@ -21,10 +21,10 @@ export default {
   methods: {
     onDelete() {
       // window.console.log("Book delete " + this.customer.id);
-      this.$emit("onDelete", this.Book.id);
+      this.$emit("onDelete", this.book);
     },
     onEdit() {
-       window.console.log("Book edit " + this.book.id);
+       //window.console.log("Book edit " + this.book.id);
       this.$emit("onEdit", this.book);
     }
   }
