@@ -1,3 +1,5 @@
+![App screenshot](../backend/public/images/screenshot_1.png "Laravel + Vue.js")
+
 # Project VueJS FrontEnd
 
 ## Project setup

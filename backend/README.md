@@ -1,5 +1,3 @@
-![App screenshot](public/images/screenshot_1.png "Laravel + Vue.js")
-
 ### Version PHP & Framework Used:
 1. PHP-8
 1. Laravel-9
@@ -32,7 +30,7 @@
 1. Clone Project - 
 
 ```bash
-git clone https://github.com/andersonpfontes/crud-api-jwt-swagger.git
+git clone https://github.com/andersonpfontes/test-softdesign-laravel-vuejs
 ```
 1. execute composer install --ignore-platform-reqs
 2. Create `.env` file & Copy `.env.example` file to `.env` file
