@@ -1,4 +1,4 @@
-### Version PHP & Framework Backend e Frontend Used:
+### Versão PHP & Framework Backend e Frontend Utilizados:
 1. PHP-8
 1. Laravel-9
 1. VueJs 2
